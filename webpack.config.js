@@ -2,11 +2,15 @@ const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry : "./src/js/script.js",
+    entry : {
+        app : "./src/js/script.js",
+        faq : "./src/js/faq.js"
+    },
     output : {
         path : path.resolve(__dirname, "public"),
-        filename : "bundle.js",
-        assetModuleFilename : "[name][ext]"
+        filename : "bundle.[name][contenthash].js",
+        assetModuleFilename : "[name][ext]",
+        clean:true
     },
     // loader
     module : {
@@ -27,7 +31,13 @@ module.exports = {
     plugins : [
         new htmlWebpackPlugin({
             template : "./src/html/index.html",
-            filename : "index.html"
-        })
+            filename : "index.html",
+            chunks : ["app"]
+        }),
+        new htmlWebpackPlugin({
+            template : "./src/html/faq.html",
+            filename : "faq.html",
+            chunks : ["faq"]
+        }),
     ]
 }

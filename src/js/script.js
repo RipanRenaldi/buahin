@@ -6,7 +6,7 @@ import {main} from "./view/main.js";
 
 const fruit = document.getElementById("test");
 fruit.src = pineapple
-
+const svg = document.getElementById("svg");
 const ripan = document.querySelector("#ripan");
 const reynaldi = document.querySelector("#reynaldi");
 const alfi = document.querySelector("#alfi");
@@ -15,6 +15,8 @@ ripan.src=selfPhoto;
 reynaldi.src=selfPhoto;
 alfi.src=selfPhoto;
 siti.src=selfPhoto;
+
+
 
 
 main();
