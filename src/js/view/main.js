@@ -23,4 +23,11 @@ export const main = ()=>{
         })
     });
     
+
+    const uploadButton = document.querySelector(".button");
+    uploadButton.addEventListener("click",(e)=>{
+        window.location = "./upload.html";
+    })
+
+
 }

@@ -4,7 +4,8 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     entry : {
         app : "./src/js/script.js",
-        faq : "./src/js/faq.js"
+        faq : "./src/js/faq.js",
+        upload : "./src/js/upload.js"
     },
     output : {
         path : path.resolve(__dirname, "public"),
@@ -38,6 +39,11 @@ module.exports = {
             template : "./src/html/faq.html",
             filename : "faq.html",
             chunks : ["faq"]
+        }),
+        new htmlWebpackPlugin({
+            template : "./src/html/upload.html",
+            filename : "upload.html",
+            chunks : ["upload"]
         }),
     ]
 }

@@ -339,3 +339,96 @@ article > .wrapper{
 .faqs .wrapper{
     margin-top:70px;
 }
+
+.upload-container{
+    min-height:65vh;
+    background : linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("../images/pineapple2.jpg");
+    background-size:100% 100%;
+    color:white;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction:column;
+}
+
+.upload-wrapper{
+    width:60%;
+    min-height:250px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background-color:white;
+    color:black;
+    flex-direction:column;
+    text-align:center;
+    position:relative;
+    
+}
+
+.upload-wrapper svg{
+    max-width:60px;
+    margin:0;
+}
+.upload-wrapper p{
+    font-size:1.5rem;
+    font-weight:500;
+    margin-bottom:20px;
+}
+.upload-wrapper form{
+    cursor:pointer;
+}
+
+.camera{
+    background-color:#3D5A80;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    border-radius:0 0 20px 20px;
+    cursor:pointer;
+}
+.camera svg{
+    max-width:35px;
+}
+
+.button-start{
+    background-color:#3D5A80;
+    padding:10px 40px;
+    border-radius:12px;   
+    cursor:pointer;
+}
+
+.upload-container h1{
+    font-weight:700;
+    font-size:2rem;
+    text-align:center;
+    width:40%;
+}
+
+.upload-container{
+    margin-bottom:50px;
+}
+
+.content-details{
+    display:flex;
+    justify-content: space-around;
+    padding:30px;
+}
+
+.content-details .how-to{
+    background-color:blue;
+    flex-basis:50%;
+
+}
+.content-details .how-to h1{
+    text-align:center;
+}
+
+.content-details .right-image{
+    flex-basis:50%;
+}
+
+
