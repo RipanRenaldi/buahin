@@ -377,6 +377,7 @@ article > .wrapper{
 }
 .upload-wrapper form{
     cursor:pointer;
+    position:relative;
 }
 
 .camera{
@@ -445,3 +446,6 @@ article > .wrapper{
     height: 25px;
 }
 
+.on-predict .image{
+    display:block;
+}

@@ -13,19 +13,22 @@
           <h1>Logo</h1>
         </div>
         <ul>
-          <li><a href="/#">Home</a></li>
-          <li><a href="/#overview">Overview</a></li>
-          <li><a href="/#our-team">Our Team</a></li>
-          <li><a href="/upload.html">Documentation</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html#overview">Overview</a></li>
+          <li><a href="./index.html#our-team">Our Team</a></li>
+          <li><a href="./upload.html">Documentation</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <article class="upload-container">
+      <article class="upload-container" id="upload">
         <h1>Detect Your Fruit Anytime, Anywhere For Free</h1>
         <div class="upload-wrapper">
-          <form action="" enctype="multipart/form-data">
+          <form action="" enctype="multipart/form-data" id="form-input">
             <input type="file" hidden id="input-file" />
+            <div class="image">
+              <img src="" alt="" id="image-input" width="100%" height="100%" />
+            </div>
             <svg
               width="90"
               height="92"
@@ -98,31 +101,38 @@
             <h1>How To Use This Website</h1>
             <div>
               <div class="row">
-                <img src="" alt="" id="no-1"/>
-                <span class="step"> ipsum dolor sit amet consectetur adipisicing elit. Labore,
+                <img src="" alt="" id="no-1" />
+                <span class="step">
+                  ipsum dolor sit amet consectetur adipisicing elit. Labore,
                   harum perferendis? Distinctio quos, eum cumque cupiditate non
                   similique quas aliquid dolore odit, nostrum consequuntur
-                  accusantium corporis, provident est deserunt dolor?</span>
+                  accusantium corporis, provident est deserunt dolor?</span
+                >
               </div>
               <div class="row">
-                <img src="" alt="" id="no-2"/>
-                <span class="step"> ipsum dolor sit amet consectetur adipisicing elit. Labore,
+                <img src="" alt="" id="no-2" />
+                <span class="step">
+                  ipsum dolor sit amet consectetur adipisicing elit. Labore,
                   harum perferendis? Distinctio quos, eum cumque cupiditate non
                   similique quas aliquid dolore odit, nostrum consequuntur
-                  accusantium corporis, provident est deserunt dolor?</span>
+                  accusantium corporis, provident est deserunt dolor?</span
+                >
               </div>
               <div class="row">
-                <img src="" alt="" id="no-3"/>
-                <span class="step"> ipsum dolor sit amet consectetur adipisicing elit. Labore,
+                <img src="" alt="" id="no-3" />
+                <span class="step">
+                  ipsum dolor sit amet consectetur adipisicing elit. Labore,
                   harum perferendis? Distinctio quos, eum cumque cupiditate non
                   similique quas aliquid dolore odit, nostrum consequuntur
-                  accusantium corporis, provident est deserunt dolor?</span>
+                  accusantium corporis, provident est deserunt dolor?</span
+                >
               </div>
               <div class="row">
-                <img src="" alt="" id="no-4"/>
-                <span class="step"> <a href="./upload.html">Try Now</a></span>
+                <img src="" alt="" id="no-4" />
+                <span class="step">
+                  <a href="./upload.html#upload">Try Now</a></span
+                >
               </div>
-              
             </div>
           </div>
           <div class="right-image">
