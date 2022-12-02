@@ -127,7 +127,7 @@ img{
 
 #our-team .card .image img{
     height:100%;
-    width: 100%;
+    /*width: 100%;*/
     border-radius:50%;
     padding:1.5px;
     background-color:#1E2233;
