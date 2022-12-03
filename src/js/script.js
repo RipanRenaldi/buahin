@@ -3,6 +3,8 @@ import pineapple from "../assets/images/pineapple.jpg"
 import selfPhoto from "../assets/images/nophoto.jpg"
 import ripanPhoto from "../assets/images/formal.jpeg"
 import alfiPhoto from "../assets/images/alfi.jpg"
+import sitiPhoto from "../assets/images/dina.jpg"
+
 import {main} from "./view/main.js";
 
 window.addEventListener("load",()=>{
@@ -17,7 +19,7 @@ window.addEventListener("load",()=>{
     ripan.src=ripanPhoto;
     reynaldi.src=selfPhoto;
     alfi.src=alfiPhoto;
-    siti.src=selfPhoto;
+    siti.src=sitiPhoto;
     main();
     
 })
