@@ -2,6 +2,9 @@ import "../assets/style/style.css";
 import pineapple from "../assets/images/pineapple.jpg"
 import selfPhoto from "../assets/images/nophoto.jpg"
 import ripanPhoto from "../assets/images/formal.jpeg"
+import alfiPhoto from "../assets/images/alfi.jpg"
+import sitiPhoto from "../assets/images/dina.jpg"
+
 import {main} from "./view/main.js";
 
 window.addEventListener("load",()=>{
@@ -15,8 +18,8 @@ window.addEventListener("load",()=>{
     const siti = document.querySelector("#siti");
     ripan.src=ripanPhoto;
     reynaldi.src=selfPhoto;
-    alfi.src=selfPhoto;
-    siti.src=selfPhoto;
+    alfi.src=alfiPhoto;
+    siti.src=sitiPhoto;
     main();
     
 })
