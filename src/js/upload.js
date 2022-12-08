@@ -17,6 +17,7 @@ const TARGET_CLASSES = {
     6:"Semangka Merah",
 }
 
+// const TARGET_CLASSES = ["satu","dua","tiga","empat","lima","enam","tujuh"]
 window.addEventListener("load",()=>{
     const rightImage = document.getElementById("right-image");
     const numberone = document.getElementById("no-1");
@@ -53,24 +54,22 @@ formInput.addEventListener("click",(e)=>{
 
         reader.addEventListener("load",()=>{
             imageInput.setAttribute("src",reader.result);
+
         })
+        formInput.classList.add("on-predict")
         reader.readAsDataURL(file);
     })
 })
 predictButton.addEventListener("click",async()=>{
     const result = await predict(imageInput);
-    console.log(result);
-    const test = Array.from(result).map((p,i)=>{
-        return {
-            probability : p,
-            className : TARGET_CLASSES[i]
-        }
-    })
-    console.log(test);
+    const category = Array.from(result).map((prob, index)=>({
+        probability : prob,
+        className : TARGET_CLASSES[index]
+    }))
+    console.log(category)
 })
 
 const predict = (input)=>{
-    console.log(input);
     const tensor = tf.browser.fromPixels(input)
     .resizeNearestNeighbor([200,200])
     .toFloat()
