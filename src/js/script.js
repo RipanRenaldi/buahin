@@ -1,26 +1,24 @@
 import "../assets/style/style.css";
-import pineapple from "../assets/images/pineapple.jpg"
-import selfPhoto from "../assets/images/nophoto.jpg"
-import ripanPhoto from "../assets/images/formal.jpeg"
-import alfiPhoto from "../assets/images/alfi.jpg"
-import sitiPhoto from "../assets/images/dina.jpg"
-import reyPhoto from "../assets/images/Rey.jpg"
+import pineapple from "../assets/images/pineapple.jpg";
+import ripanPhoto from "../assets/images/profile/Ripan.jpeg";
+import alfiPhoto from "../assets/images/profile/Alfi.jpg";
+import sitiPhoto from "../assets/images/profile/Dina.jpg";
+import reyPhoto from "../assets/images/profile/Rey.jpg";
+// import selfPhoto from "../assets/images/nophoto.jpg";
 
-import {main} from "./view/main.js";
+import { main } from "./view/main.js";
 
-window.addEventListener("load",()=>{
-
-    const fruit = document.getElementById("test");
-    fruit.src = pineapple
-    const svg = document.getElementById("svg");
-    const ripan = document.querySelector("#ripan");
-    const reynaldi = document.querySelector("#reynaldi");
-    const alfi = document.querySelector("#alfi");
-    const siti = document.querySelector("#siti");
-    ripan.src=ripanPhoto;
-    reynaldi.src=reyPhoto;
-    alfi.src=alfiPhoto;
-    siti.src=sitiPhoto;
-    main();
-    
-})
+window.addEventListener("load", () => {
+  const fruit = document.getElementById("test");
+  fruit.src = pineapple;
+  const svg = document.getElementById("svg");
+  const ripan = document.querySelector("#user-ripan");
+  const reynaldi = document.querySelector("#user-reynaldi");
+  const alfi = document.querySelector("#user-alfi");
+  const siti = document.querySelector("#user-siti");
+  ripan.src = ripanPhoto;
+  reynaldi.src = reyPhoto;
+  alfi.src = alfiPhoto;
+  siti.src = sitiPhoto;
+  main();
+});
