@@ -4,6 +4,7 @@ import selfPhoto from "../assets/images/nophoto.jpg"
 import ripanPhoto from "../assets/images/formal.jpeg"
 import alfiPhoto from "../assets/images/alfi.jpg"
 import sitiPhoto from "../assets/images/dina.jpg"
+import reyPhoto from "../assets/images/Rey.jpg"
 
 import {main} from "./view/main.js";
 
@@ -17,7 +18,7 @@ window.addEventListener("load",()=>{
     const alfi = document.querySelector("#alfi");
     const siti = document.querySelector("#siti");
     ripan.src=ripanPhoto;
-    reynaldi.src=selfPhoto;
+    reynaldi.src=reyPhoto;
     alfi.src=alfiPhoto;
     siti.src=sitiPhoto;
     main();
