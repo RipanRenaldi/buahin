@@ -446,7 +446,7 @@ article > .wrapper{
     height: 25px;
 }
 
-.on-predict .image{
+.on-predict .image-upload{
     display:block;
 
 }
@@ -454,7 +454,7 @@ article > .wrapper{
     display:none;
 }
 
-.image{
+.image-upload{
     width:300px;
     height:200px;
     display:none;
