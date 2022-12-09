@@ -6,16 +6,17 @@ import sitiPhoto from "../assets/images/profile/Dina.jpg";
 import reyPhoto from "../assets/images/profile/Rey.jpg";
 // import selfPhoto from "../assets/images/nophoto.jpg";
 
+import './component/faq-section.js';
 import { main } from "./view/main.js";
 
 window.addEventListener("load", () => {
   const fruit = document.getElementById("test");
   fruit.src = pineapple;
   const svg = document.getElementById("svg");
-  const ripan = document.querySelector("#user-ripan");
-  const reynaldi = document.querySelector("#user-reynaldi");
-  const alfi = document.querySelector("#user-alfi");
-  const siti = document.querySelector("#user-siti");
+  const ripan = document.getElementById("user-ripan");
+  const reynaldi = document.getElementById("user-reynaldi");
+  const alfi = document.getElementById("user-alfi");
+  const siti = document.getElementById("user-siti");
   ripan.src = ripanPhoto;
   reynaldi.src = reyPhoto;
   alfi.src = alfiPhoto;
