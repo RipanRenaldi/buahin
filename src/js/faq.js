@@ -1,4 +1,7 @@
 import "../assets/style/style.css"
+import './component/header-bar.js'
+import './component/footer-bar.js'
+
 const buttonActive = document.querySelectorAll(".accordion");
 
 window.addEventListener("load",()=>{

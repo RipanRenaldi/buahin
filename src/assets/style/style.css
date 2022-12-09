@@ -15,7 +15,7 @@
   cursor: pointer;
 }
 
-header > nav {
+header-bar > nav {
   --primary-color: #3d5a80;
   /* background-color:#1E2233; */
 
@@ -29,16 +29,16 @@ header > nav {
   background-color: var(--primary-color);
 }
 
-header nav ul {
+header-bar nav ul {
   display: flex;
   width: 60%;
   justify-content: space-evenly;
 }
 
-header nav ul li {
+header-bar nav ul li {
   list-style: none;
 }
-header nav ul li a {
+header-bar nav ul li a {
   text-decoration: none;
   color: white;
 }
