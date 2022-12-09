@@ -1,4 +1,5 @@
 import "../assets/style/style.css";
+import './component/header-bar.js';
 import './component/overview-section.js';
 import './component/faq-section.js';
 import './component/profile-section.js';
