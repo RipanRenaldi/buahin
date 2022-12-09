@@ -1,9 +1,9 @@
 import "../assets/style/style.css";
 import './component/header-bar.js';
-import './component/overview-section.js';
-import './component/faq-section.js';
-import './component/profile-section.js';
 import './component/footer-bar.js';
+import './component/index/overview-section.js';
+import './component/index/faq-section.js';
+import './component/index/profile-section.js';
 import { main } from "./view/main.js";
 
 import pineapple from "../assets/images/pineapple.jpg";

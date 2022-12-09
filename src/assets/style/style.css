@@ -203,8 +203,8 @@ footer-bar {
   align-items: center;
 }
 
-article > .wrapper, 
-faq-section > .wrapper {
+faq-section > .wrapper, 
+faq-details-section > .wrapper {
   max-width: 1280px;
   margin: 0 auto;
   display: flex;

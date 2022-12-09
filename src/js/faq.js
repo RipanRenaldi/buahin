@@ -1,6 +1,7 @@
 import "../assets/style/style.css"
 import './component/header-bar.js'
 import './component/footer-bar.js'
+import './component/faq/faq-details-section.js'
 
 const buttonActive = document.querySelectorAll(".accordion");
 
