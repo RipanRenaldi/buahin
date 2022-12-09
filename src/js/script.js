@@ -7,6 +7,7 @@ import reyPhoto from "../assets/images/profile/Rey.jpg";
 // import selfPhoto from "../assets/images/nophoto.jpg";
 
 import './component/faq-section.js';
+import './component/profile-section.js';
 import { main } from "./view/main.js";
 
 window.addEventListener("load", () => {
