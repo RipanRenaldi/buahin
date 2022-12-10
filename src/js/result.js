@@ -15,3 +15,18 @@ resultCards.forEach((card,index)=>{
     <h2>${dataStorages[index].className}</h2>
     <p>${(dataStorages[index].probability * 100).toFixed(2)} %</p>`
 })
+
+const shadowBarElement = document.querySelector("header-bar")
+const eventClick = (e)=>{
+    e.target.parentElement.classList.toggle("hamburger")
+    let ul = e.target.parentElement.nextElementSibling 
+    ul.classList.toggle("slide")
+    let li = ul.querySelectorAll("li");
+
+    li.forEach(value=>{
+        value.addEventListener("click",()=>{
+            ul.classList.remove("slide")
+        })
+    })
+}
+shadowBarElement.setEvent = eventClick;

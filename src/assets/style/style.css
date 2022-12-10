@@ -8,8 +8,11 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
+  
 }
-
+html{
+  overflow-x:hidden;
+}
 .logo:hover,
 .logo:focus {
   cursor: pointer;
@@ -17,15 +20,12 @@
 
 header-bar > nav {
   --primary-color: #3d5a80;
-  /* background-color:#1E2233; */
-
   color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px 0;
   font-size: 18px;
-
   background-color: var(--primary-color);
 }
 
@@ -211,7 +211,9 @@ faq-details-section > .wrapper {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position:relative;
 }
+
 
 .faq h1 {
   text-align: center;
@@ -541,4 +543,112 @@ faq-details-section > .wrapper {
   bottom:0;
   left:0;
   right:0;
+}
+.menu{
+  display:none;
+}
+.hamburger{
+  display:block;
+}
+
+body{
+  overflow-x:hidden;
+}
+@media screen and (max-width:576px){
+
+  #upload h1{
+    font-size:1.25rem;
+    width:50vw;
+  }
+  header-bar h1{
+    font-size:1.5rem;
+  }
+  header-bar h1::first-letter{
+    color:yellow;
+    font-size:1.8rem;
+  }
+  #upload{
+    justify-content: space-around;
+  }
+  .upload-wrapper{
+    min-height:250px;
+  }
+  .upload-wrapper svg{
+    max-width:38px;
+  }
+  .upload-wrapper p{
+    font-size:1.25rem;
+  }
+  .camera svg{
+    max-width:35px;
+  }
+
+  .content-details .right-image{
+    display:none;
+  }
+  .content-details .how-to h1{
+    font-size:1.8rem;
+  }
+  .row .step{
+    font-size:1rem;
+  }
+  .row{
+    margin-bottom:20px;
+  }
+  header-bar nav{
+    font-size:1rem;
+  }
+
+  header-bar nav{
+    justify-content: space-around;
+  }
+  .menu{
+    display:block;
+    z-index:9999;
+  }
+
+  .menu span{
+    display:block;
+    width:20px;
+    height:3px;
+    background-color:white;
+    margin:5px;
+    transition:.3s;
+  }
+  .menu span:hover{
+    cursor:pointer;
+  }
+
+
+  .hamburger span:nth-child(1){
+    transform:rotate(45deg) translateX(2px);
+    transform-origin:0 0;
+  }
+  .hamburger span:nth-child(2){
+    background-color:blue;
+    opacity:0;
+  }
+  .hamburger span:nth-child(3){
+    transform:rotate(-45deg) translateX(2px) translateY(0px);
+    transform-origin:0 100%;
+  }
+  
+  header-bar nav .menu + ul{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    color:black;
+    top:0;
+    right:1000px;
+    height:100vh;
+    background-color:#384760;
+    transition:.3s;
+    width:50%;
+    align-items:center;
+    overflow-x:hidden;
+    z-index:1000;
+  }
+  header-bar nav .menu + ul.slide{
+    right:0;
+  }
 }
