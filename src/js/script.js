@@ -1,25 +1,25 @@
 import "../assets/style/style.css";
-import pineapple from "../assets/images/pineapple.jpg"
-import selfPhoto from "../assets/images/nophoto.jpg"
-import ripanPhoto from "../assets/images/formal.jpeg"
-import alfiPhoto from "../assets/images/alfi.jpg"
-import sitiPhoto from "../assets/images/dina.jpg"
+import './component/header-bar.js';
+import './component/footer-bar.js';
+import './component/index/overview-section.js';
+import './component/index/faq-section.js';
+import './component/index/profile-section.js';
+import { main } from "./view/main.js";
 
-import {main} from "./view/main.js";
+import pineapple from "../assets/images/pineapple.jpg";
+import profile1 from "../assets/images/profile/Ripan.jpeg";
+import profile2 from "../assets/images/profile/Rey.jpg";
+import profile3 from "../assets/images/profile/Alfi.jpg";
+import profile4 from "../assets/images/profile/Dina.jpg";
+// import selfPhoto from "../assets/images/nophoto.jpg";
 
-window.addEventListener("load",()=>{
+window.addEventListener("load", () => {
+  // const svg = document.getElementById("svg");
+  document.getElementById("test").src = pineapple;
+  document.getElementById("user-ripan").src = profile1;
+  document.getElementById("user-reynaldi").src = profile2;
+  document.getElementById("user-alfi").src = profile3;
+  document.getElementById("user-siti").src = profile4;
+});
 
-    const fruit = document.getElementById("test");
-    fruit.src = pineapple
-    const svg = document.getElementById("svg");
-    const ripan = document.querySelector("#ripan");
-    const reynaldi = document.querySelector("#reynaldi");
-    const alfi = document.querySelector("#alfi");
-    const siti = document.querySelector("#siti");
-    ripan.src=ripanPhoto;
-    reynaldi.src=selfPhoto;
-    alfi.src=alfiPhoto;
-    siti.src=sitiPhoto;
-    main();
-    
-})
+document.addEventListener('DOMContentLoaded', main);

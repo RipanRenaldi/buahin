@@ -1,4 +1,8 @@
 import "../assets/style/style.css";
+import './component/header-bar.js'
+import './component/footer-bar.js'
+import './component/upload/instruction-section.js'
+
 import fruit from "../assets/images/pineapple.jpg";
 import number1 from "../assets/images/number1.png";
 import number2 from "../assets/images/number2.png";
