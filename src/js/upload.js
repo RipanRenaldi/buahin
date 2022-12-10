@@ -9,16 +9,24 @@ import number2 from "../assets/images/number2.png";
 import number3 from "../assets/images/number3.png";
 import number4 from "../assets/images/number4.png";
 import * as tf from "@tensorflow/tfjs";
+import { NonMaxSuppressionV3 } from "@tensorflow/tfjs";
 
 
 const TARGET_CLASSES = {
-    0: "Apel Envy",
-    1:"Apel Malang",
-    2:"Lemon California",
-    3:"Mangga Harumanis",
-    4:"Pisang Cavendish",
-    5:"Pisang Kepok",
-    6:"Semangka Merah",
+    0: "Alpuket",
+    1:"Apel Envy",
+    2:"Apel Malang",
+    3:"Belimbing",
+    4:"Durian",
+    5:"Jeruk",
+    6:"Mangga Harum Manis",
+    7 :"Nanas",
+    8:"Pisang Cavendish",
+    9:"Pisang Kepok",
+    10:"Rambutan",
+    11:"Salak",
+    12:"Semangka Merah",
+    13:"Strawberry",
 }
 
 // const TARGET_CLASSES = ["satu","dua","tiga","empat","lima","enam","tujuh"]
@@ -38,7 +46,7 @@ let model;
 const init = async()=>{
     console.log("Load Model");
     model = await tf.loadLayersModel("./tfjsmodel/model.json");
-    console.log("Model Loaded");
+    console.log("Model Loaded")
     
 }
 
@@ -48,7 +56,8 @@ const formInput = document.querySelector("#form-input");
 const inputFile = document.querySelector("#input-file");
 const imageInput = document.querySelector("#image-input");
 const predictButton = document.querySelector(".button-start");
-const imageWrapper = document.querySelector(".image");
+
+
 
 formInput.addEventListener("click",(e)=>{
     inputFile.click();
@@ -70,7 +79,14 @@ predictButton.addEventListener("click",async()=>{
         probability : prob,
         className : TARGET_CLASSES[index]
     }))
-    console.log(category)
+
+    const prob = category.map(value=>value.probability)
+
+    const argMax = Math.max.apply(null,prob)
+
+    const fruit = prob.indexOf(argMax);
+    alert(`Mungkin adalah ${category[fruit].className}`);
+
 })
 
 const predict = (input)=>{
@@ -83,3 +99,40 @@ const predict = (input)=>{
     const history = model.predict(tensor);
     return history.data();
 }
+
+const webcamWrapper = document.querySelector(".webcam-wrapper")
+const videoElement = document.querySelector("#web-video")
+const buttonCamera = document.querySelector(".camera")
+const canvasElement = document.querySelector("#web-canvas")
+const captureButton = document.querySelector("#capture-button")
+buttonCamera.addEventListener("click",()=>{
+    webcamWrapper.style.display="block"
+    initCamera();
+})
+
+const initCamera = async()=>{
+    try{
+        const stream = await navigator.mediaDevices.getUserMedia({video: {facingMode : "user"}, audio:false})
+        videoElement.srcObject = stream;
+        webcamWrapper.classList.add("stream")
+    }catch(e){
+        console.log(e)
+    }
+}
+const snapPicture = async()=>{
+    canvasElement.getContext("2d").drawImage(videoElement,0,-80,250,250);
+    const imageData = canvasElement.toDataURL("image/jpeg")
+    imageInput.setAttribute("src",imageData)
+    formInput.classList.add("on-predict")
+
+}
+
+captureButton.addEventListener("click", async()=>{
+    try{
+        snapPicture()
+        webcamWrapper.style.display="none"
+    }catch(e){
+        console.log(e)
+    }
+})
+
