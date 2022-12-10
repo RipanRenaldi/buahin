@@ -242,8 +242,8 @@ faq-details-section > .wrapper {
   color: #5b5b5b;
 }
 .wrapper .accordion h2 {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
+  font-size: 1rem;
+  margin-bottom: 40px;
   font-weight: 500;
 }
 .accordion > svg {
