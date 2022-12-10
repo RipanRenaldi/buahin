@@ -6,16 +6,57 @@ class OverviewSection extends HTMLElement {
     render() {
         this.innerHTML = 
         `
+        <style>
+        @media screen and (max-width: 550px) {
+          .container {
+            margin: 20px 10px;
+            flex-direction: column-reverse;
+          }
+          .overview {
+            margin-bottom: 40px;
+            max-width: 100%;
+          }
+          .overview h1{
+            font-size:1.7rem;
+          }
+          .overview p{
+            font-size:0.9rem;
+            max-width: 555px;
+          }
+        }
+
+        @media screen and (max-width: 880px) {
+          .container {
+            margin: 30px 10px;
+            flex-direction: column-reverse;
+          }
+          .overview {
+            margin-bottom: 40px;
+            max-width: 100%;
+          }
+          .overview h1{
+            font-size:1.7rem;
+          }
+          .overview p{
+            font-size:0.9rem;
+            max-width: 555px;
+          }
+          .button{
+            margin-top:2rem;
+            font-size: 0.8rem;
+            width: 150px;
+            padding: 15px;
+          }
+        }
+        </style>
+
         <div class="container" id="overview">
         <div class="overview">
           <h1>Detect Your Fruit Anytime Anywhere</h1>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Accusamus provident non rem assumenda mollitia facilis. Et ab
-            corporis doloribus quos odio? Error sunt vel sapiente tempore hic
-            aliquam expedita quae. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Similique architecto omnis repudiandae dolores
-            cupiditate quam dolor.
+            Buahin merupakan aplikasi fruit detector berbasis website
+            untuk memudahkan dalam mengidentifikasi berbagai macam jenis 
+            buah-buahan.
           </p>
           <div class="button">Get Started</div>
         </div>
