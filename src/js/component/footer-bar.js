@@ -1,4 +1,4 @@
-class HeaderBar extends HTMLElement {
+class FooterBar extends HTMLElement {
     connectedCallback() {
         this.render();
     }
@@ -8,38 +8,23 @@ class HeaderBar extends HTMLElement {
         `
         <style>
         @media screen and (max-width: 550px) {
-            nav ul li {
-                font-size: 10px;
-                margin-right: 3px;
-            }
-            .logo {
-                font-size: 11px;
+            footer-bar {
+                margin-top: 80px;
+                font-size: 0.8rem;
             }
         }
 
         @media screen and (max-width: 880px) {
-            nav ul li {
-                font-size: 12px;
-            }
-            .logo {
-                font-size: 15px;
+            footer-bar {
+                margin-top: 80px;
+                font-size: 0.9rem;
             }
         }
         </style>
 
-        <nav>
-            <div class="logo">
-                <h1>Buahin</h1>
-            </div>
-            <ul>
-                <li><a href="./index.html#">Home</a></li>
-                <li><a href="./index.html#overview">Overview</a></li>
-                <li><a href="./index.html#our-team">Our Team</a></li>
-                <li><a href="./upload.html">Documentation</a></li>
-            </ul>
-        </nav>
+        <p>&copy; 2022 | <strong>Team C22-172 SIB Batch 3 Dicoding</strong></p>
         `;
     }
 }
 
-customElements.define('header-bar', HeaderBar);
+customElements.define('footer-bar', FooterBar);
