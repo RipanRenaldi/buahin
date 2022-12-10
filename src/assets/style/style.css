@@ -501,3 +501,44 @@ faq-details-section > .wrapper {
   color:white;
   cursor:pointer;
 }
+
+.result-container h1{
+  font-size:38px;
+  text-align:center;
+  font-weight:500;
+  margin-bottom:5vh;
+  margin-top:30px;
+}
+.result-wrapper{
+  display:flex;
+  justify-content: space-around;
+  align-items:flex-start;
+  position:relative;
+}
+.result-container .result-wrapper .left-image-prediction{
+  flex-basis:40%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+.result-container .result-wrapper .left-image-prediction img{
+  max-height:350px;
+}
+
+.result-container .result-wrapper .result-prediction{
+  flex-basis:40%;
+}
+.result-card{
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #C2C2C2;
+  box-shadow: 5px 5px 0 0 rgba(0,0,0,0.1);
+  margin-bottom:25px;
+  
+}
+#result-footer{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+}

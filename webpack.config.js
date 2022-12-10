@@ -5,7 +5,8 @@ module.exports = {
     entry : {
         app : "./src/js/script.js",
         faq : "./src/js/faq.js",
-        upload : "./src/js/upload.js"
+        upload : "./src/js/upload.js",
+        test : "./src/js/result.js"
     },
     output : {
         path : path.resolve(__dirname, "public"),
@@ -45,5 +46,10 @@ module.exports = {
             filename : "upload.html",
             chunks : ["upload"]
         }),
+        new htmlWebpackPlugin({
+            template : "./src/html/result.html",
+            filename : "result.html",
+            chunks : ["test"]
+        })
     ]
 }

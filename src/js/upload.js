@@ -11,22 +11,27 @@ import number4 from "../assets/images/number4.png";
 import * as tf from "@tensorflow/tfjs";
 import { NonMaxSuppressionV3 } from "@tensorflow/tfjs";
 
-
+const SESSION_KEY = "pred"
+if(!sessionStorage.getItem(SESSION_KEY)){
+    sessionStorage.setItem(SESSION_KEY,{})
+}
 const TARGET_CLASSES = {
-    0: "Alpuket",
+    0: "Alpukat Mentega",
     1:"Apel Envy",
     2:"Apel Malang",
-    3:"Belimbing",
-    4:"Durian",
-    5:"Jeruk",
-    6:"Mangga Harum Manis",
-    7 :"Nanas",
-    8:"Pisang Cavendish",
-    9:"Pisang Kepok",
-    10:"Rambutan",
-    11:"Salak",
-    12:"Semangka Merah",
-    13:"Strawberry",
+    3:"Jeruk Peras",
+    4:"Jeruk Sunkist",
+    5:"Kiwi Green",
+    6:"Lemon California",
+    7 :"Mangga Alpukat",
+    8:"Mangga Harum Manis",
+    9:"Naga Merah",
+    10:"Pear Century",
+    11:"Pisang Cavendish",
+    12:"Pisang Kepok",
+    13:"Salak Pondoh",
+    14 : "Semangka Merah",
+    15 : "Strawberry"
 }
 
 // const TARGET_CLASSES = ["satu","dua","tiga","empat","lima","enam","tujuh"]
@@ -73,29 +78,22 @@ formInput.addEventListener("click",(e)=>{
         reader.readAsDataURL(file);
     })
 })
+
 predictButton.addEventListener("click",async()=>{
     const result = await predict(imageInput);
     const category = Array.from(result).map((prob, index)=>({
         probability : prob,
         className : TARGET_CLASSES[index]
     }))
-
-    const prob = category.map(value=>value.probability)
-
-    const argMax = Math.max.apply(null,prob)
-
-    const fruit = prob.indexOf(argMax);
-    alert(`Mungkin adalah ${category[fruit].className}`);
-
+    const probSorted = category.sort((a,b)=>b.probability-a.probability)
+    const [topOne,topTwo,topThree] = probSorted
+    sessionStorage.setItem(SESSION_KEY, JSON.stringify([topOne,topTwo,topThree,{sourceImage : imageInput.getAttribute("src")}]))
+    // alert(`Mungkin adalah ${topOne.className}`)
+    window.location.href = "/result.html"
 })
 
 const predict = (input)=>{
-    const tensor = tf.browser.fromPixels(input)
-    .resizeNearestNeighbor([200,200])
-    .toFloat()
-    .div(tf.scalar(255.0))
-    .expandDims();
-
+    const tensor = tf.browser.fromPixels(input).resizeNearestNeighbor([200,200]).toFloat().div(255.0).expandDims()
     const history = model.predict(tensor);
     return history.data();
 }
