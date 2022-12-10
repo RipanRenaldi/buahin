@@ -6,6 +6,22 @@ class ProfileSection extends HTMLElement {
     render() {
         this.innerHTML = 
         `
+        <style>
+        @media screen and (max-width: 550px) {
+          #our-team h1{
+            margin-top:70px;
+            font-size: 1.6rem;
+          }
+        }
+
+        @media screen and (max-width: 880px) {
+          #our-team h1{
+            margin-top:70px;
+            font-size: 1.7rem;
+          }
+        }
+        </style>
+
         <h1>Our Team</h1>
         <div class="team">
         <div class="content">
