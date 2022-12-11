@@ -31,16 +31,25 @@ export const main = ()=>{
 
     const shadowBarElement = document.querySelector("header-bar")
     const eventClick = (e)=>{
-        e.target.parentElement.classList.toggle("hamburger")
+        let menu = e.target.parentElement
+        menu.classList.toggle("hamburger")
         let ul = e.target.parentElement.nextElementSibling 
         ul.classList.toggle("slide")
+        console.log(ul);
         let li = ul.querySelectorAll("li");
+        console.log(li);
 
         li.forEach(value=>{
             value.addEventListener("click",()=>{
                 ul.classList.remove("slide")
+                menu.classList.remove("hamburger")
+
             })
         })
     }
     shadowBarElement.setEvent = eventClick;
+
+
+    console.log(dataStorages)
+
 }

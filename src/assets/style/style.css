@@ -310,27 +310,8 @@ faq-details-section > .wrapper {
   align-items: center;
 }
 
-.faqs .search {
-  margin-top: 30px;
-  padding: 5px 10px;
-  position: relative;
-}
-.faqs .search input {
-  padding: 10px 50px;
-  border-radius: 10px;
-  width: 400px;
-  border: 1px solid #777777;
-}
-
-.faqs .search svg {
-  position: absolute;
-  height: 25px;
-  left: 20px;
-  top: 14px;
-}
-
 .faqs .wrapper {
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 .upload-container {
@@ -546,6 +527,7 @@ faq-details-section > .wrapper {
 }
 .menu{
   display:none;
+  
 }
 .hamburger{
   display:block;
@@ -602,9 +584,14 @@ body{
   header-bar nav{
     justify-content: space-around;
   }
+  header-bar nav ul li a{
+    font-size:1.25rem;
+  }
   .menu{
     display:block;
     z-index:9999;
+    width:35px;
+    height:35px;
   }
 
   .menu span{
@@ -615,7 +602,7 @@ body{
     margin:5px;
     transition:.3s;
   }
-  .menu span:hover{
+  .menu span:hover, .menu:hover, .menu:focus{
     cursor:pointer;
   }
 
@@ -642,13 +629,80 @@ body{
     right:1000px;
     height:100vh;
     background-color:#384760;
-    transition:.3s;
+    transition:all .3s;
     width:50%;
     align-items:center;
-    overflow-x:hidden;
     z-index:1000;
   }
+  
   header-bar nav .menu + ul.slide{
-    right:0;
+    left:0;
+    transition:.3s;
   }
+  .accordion{
+    max-width:85vw;
+  }
+  .accordion svg{
+    max-width:30px;
+    right:20px;
+  }
+  .wrapper .accordion h2{
+    font-size:.8rem;
+    max-width:90%;
+  }
+  .wrapper .accordion{
+    padding:20px 40px
+  }
+  .wrapper .accordion p{
+    font-size:.8rem;
+  }
+  .active{
+    height:300px;
+  }
+
+  #image-input{
+    max-width:50%;
+    max-height:70%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-60%);
+
+  }
+  .result-wrapper .result-card{
+    width:80vw;
+  }
+  .result-card h2{
+    font-size:1.5rem;
+    margin-bottom:5px;
+  }
+  .result-card p{
+    font-size:1.25rem;
+  }
+  .result-wrapper #pred-image{
+    max-width:80vw;
+    max-height:30vh;
+    margin-bottom:30px;
+  }
+  
+  .result-wrapper{
+    flex-direction:column;
+    align-items:center;
+    justify-content: space-around;
+  }
+  .result-container h1{
+    font-size:2rem;
+  }
+
+  #result-footer{
+    position:relative;
+  }
+  
+  .webcam-wrapper #web-video{
+    width:80vw;
+  }
+  #capture-button{
+    top:26vh;
+  }
+
 }

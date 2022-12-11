@@ -10,7 +10,6 @@ import number2 from "../assets/images/number2.png";
 import number3 from "../assets/images/number3.png";
 import number4 from "../assets/images/number4.png";
 import * as tf from "@tensorflow/tfjs";
-import { NonMaxSuppressionV3 } from "@tensorflow/tfjs";
 
 const SESSION_KEY = "pred"
 if(!sessionStorage.getItem(SESSION_KEY)){

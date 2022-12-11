@@ -79,6 +79,7 @@ class FAQSection extends HTMLElement {
             width:155px;
             padding:15px 20px;
           }
+          
         }
         </style>
 
