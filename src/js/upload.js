@@ -48,10 +48,13 @@ window.addEventListener("load", () => {
   numberfour.src = number4;
 });
 
+const MODEL_JSON_URL =
+  "https://cdn.glitch.global/50a2dd22-bf5a-4d29-8556-2567b7a29cae/model.json?v=1670744154265";
+
 let model;
 const init = async () => {
   console.log("Load Model");
-  model = await tf.loadLayersModel("./tfjsmodel/model.json");
+  model = await tf.loadLayersModel(MODEL_JSON_URL);
   console.log("Model Loaded");
 };
 
