@@ -1,11 +1,10 @@
 class FAQSection extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = 
-        `
+  render() {
+    this.innerHTML = `
         <style>
         @media screen and (max-width: 550px) {
           .faq h1 {
@@ -122,8 +121,8 @@ class FAQSection extends HTMLElement {
         </div>
         <a href="faq.html" class="more-questions">More Questions..</a>
         `;
-        this.setAttribute('class', 'faq');
-    }
+    this.setAttribute("class", "faq");
+  }
 }
 
-customElements.define('faq-section', FAQSection);
+customElements.define("faq-section", FAQSection);

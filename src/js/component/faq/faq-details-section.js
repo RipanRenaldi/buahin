@@ -1,11 +1,10 @@
 class FAQSection extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = 
-        `
+  render() {
+    this.innerHTML = `
         <header>
         <h1>FAQs</h1>
         <h1>Frequently Asked Questions</h1>
@@ -46,8 +45,8 @@ class FAQSection extends HTMLElement {
         </section>
         </div>
         `;
-        this.setAttribute('class', 'faqs');
-    }
+    this.setAttribute("class", "faqs");
+  }
 }
 
-customElements.define('faq-details-section', FAQSection);
+customElements.define("faq-details-section", FAQSection);

@@ -1,11 +1,10 @@
 class InstructionSection extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = 
-        `
+  render() {
+    this.innerHTML = `
         <div class="content-details">
         <div class="how-to">
           <h1>Cara Menggunakan Website</h1>
@@ -41,7 +40,7 @@ class InstructionSection extends HTMLElement {
         </div>
         </div>
         `;
-    }
+  }
 }
 
-customElements.define('instruction-section', InstructionSection);
+customElements.define("instruction-section", InstructionSection);
