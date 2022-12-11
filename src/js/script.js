@@ -4,7 +4,6 @@ import './component/footer-bar.js';
 import './component/index/overview-section.js';
 import './component/index/faq-section.js';
 import './component/index/profile-section.js';
-import "./faq.js"
 import { main } from "./view/main.js";
 
 import pineapple from "../assets/images/pineapple.jpg";

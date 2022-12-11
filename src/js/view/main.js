@@ -8,7 +8,6 @@ export const main = ()=>{
     const buttonActive = document.querySelectorAll(".accordion");
 
     buttonActive.forEach(accordion=>{
-        console.log(accordion);
         accordion.addEventListener("click",()=>{
             accordion.classList.toggle("active");
             const icon = accordion.querySelector("svg path");
@@ -35,9 +34,7 @@ export const main = ()=>{
         menu.classList.toggle("hamburger")
         let ul = e.target.parentElement.nextElementSibling 
         ul.classList.toggle("slide")
-        console.log(ul);
         let li = ul.querySelectorAll("li");
-        console.log(li);
 
         li.forEach(value=>{
             value.addEventListener("click",()=>{
@@ -48,8 +45,4 @@ export const main = ()=>{
         })
     }
     shadowBarElement.setEvent = eventClick;
-
-
-    console.log(dataStorages)
-
 }

@@ -590,7 +590,7 @@ body{
   .menu{
     display:block;
     z-index:9999;
-    width:35px;
+    width:50px;
     height:35px;
   }
 
