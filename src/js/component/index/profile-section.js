@@ -9,6 +9,8 @@ class ProfileSection extends HTMLElement {
         nama: "Ripan Renaldi",
         universitas: "Telkom University",
         jurusan: "Sistem Informasi",
+        dicodingId : "M012X0101",
+        dicodingGroup : "M04"
       },
       {
         nama: "Reynaldi Hadiansyah",
@@ -253,6 +255,8 @@ class ProfileSection extends HTMLElement {
                     <h2>Nama : ${listBio[index].nama}</h2>
                     <h2> Universitas : ${listBio[index].universitas}</h2>
                     <h2> Jurusan : ${listBio[index].jurusan} </h2>
+                    <h2> ID Dicoding : ${listBio[index].dicodingId} </h2>
+                    <h2> Grup Dicoding : ${listBio[index].dicodingGroup} </h2>
                   </div>
                   `;
 
