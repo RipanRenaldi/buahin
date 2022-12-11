@@ -18,6 +18,7 @@ window.addEventListener("load", () => {
   document.getElementById("user-reynaldi").src = profile2;
   document.getElementById("user-alfi").src = profile3;
   document.getElementById("user-siti").src = profile4;
+
 });
 
 document.addEventListener('DOMContentLoaded', main);

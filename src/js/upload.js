@@ -66,7 +66,7 @@ const predictButton = document.querySelector(".button-start");
 
 formInput.addEventListener("click",(e)=>{
     inputFile.click();
-    e.target.addEventListener("change",async ({target})=>{
+    e.target.addEventListener("change", ({target})=>{
         let file = target.files[0];
         const reader = new FileReader();
 
@@ -88,7 +88,6 @@ predictButton.addEventListener("click",async()=>{
     const probSorted = category.sort((a,b)=>b.probability-a.probability)
     const [topOne,topTwo,topThree] = probSorted
     sessionStorage.setItem(SESSION_KEY, JSON.stringify([topOne,topTwo,topThree,{sourceImage : imageInput.getAttribute("src")}]))
-    // alert(`Mungkin adalah ${topOne.className}`)
     window.location.href = "/result.html"
 })
 
@@ -117,7 +116,7 @@ const initCamera = async()=>{
         console.log(e)
     }
 }
-const snapPicture = async()=>{
+const snapPicture = ()=>{
     canvasElement.getContext("2d").drawImage(videoElement,0,-80,250,250);
     const imageData = canvasElement.toDataURL("image/jpeg")
     imageInput.setAttribute("src",imageData)
@@ -125,7 +124,7 @@ const snapPicture = async()=>{
 
 }
 
-captureButton.addEventListener("click", async()=>{
+captureButton.addEventListener("click", ()=>{
     try{
         snapPicture()
         webcamWrapper.style.display="none"

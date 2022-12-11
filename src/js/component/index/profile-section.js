@@ -2,7 +2,28 @@ class ProfileSection extends HTMLElement {
     connectedCallback() {
         this.render();
     }
-
+    get getBio(){
+      return [
+        {
+          nama : "Ripan Renaldi",
+          universitas : "Telkom University",
+          jurusan : "Sistem Informasi"
+        },
+        {
+          nama : "Reynaldi Hardiansyah",
+          universitas : "Universitas Amikom Yogyakarta",
+          jurusan : "x"
+        },        {
+          nama : "Alfi Safira Az Zahrah",
+          universitas : "UPN Veteran Jawa Timur",
+          jurusan : "x"
+        },        {
+          nama : "Siti Auliaddina",
+          universitas : "Universitas Adhirajasa Reswara Sanjaya",
+          jurusan : "x"
+        },
+      ]
+    }
     render() {
         this.innerHTML = 
         `
@@ -22,6 +43,23 @@ class ProfileSection extends HTMLElement {
         }
         </style>
 
+        <div class="modal" id="modal">
+        <div class="modal-header">
+          <div class="title">Biodata</div>
+          <button class="close-button" data-modal-close>&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="self-image">
+            <img src="" id="test2" alt="">
+          </div>
+          <div class="self-bio">
+            <h2>Nama : Ripan Renaldi</h2>
+            <h2>Universitas : Ripan Renaldi</h2>
+            <h2>Jurusan : Sistem Informasi </h2>
+          </div>
+        </div>
+      </div>
+      <div id="overlay"></div>
         <h1>Our Team</h1>
         <div class="team">
         <div class="content">
@@ -65,7 +103,7 @@ class ProfileSection extends HTMLElement {
                   </a>
                 </div>
               </div>
-              <div class="bio-button">About Me</div>
+              <div class="bio-button" data-modal-target="#modal">About Me</div>
             </div>
           </div>
           <div class="card">
@@ -74,7 +112,7 @@ class ProfileSection extends HTMLElement {
                 <img id="user-reynaldi" />
               </div>
               <div class="bio">
-                <p>Reynaldi Hadiansyah</p>
+                <p>Reynaldi Hardiansyah</p>
                 <p>Universitas Amikom Yogyakarta</p>
               </div>
               <div class="social-media">
@@ -106,7 +144,7 @@ class ProfileSection extends HTMLElement {
                 </div>
                 </a>
               </div>
-              <div class="bio-button">About Me</div>
+              <div class="bio-button" data-modal-target="#modal">About Me</div>
             </div>
           </div>
           <div class="card">
@@ -147,7 +185,7 @@ class ProfileSection extends HTMLElement {
                 </div>
                 </a>
               </div>
-              <div class="bio-button">About Me</div>
+              <div class="bio-button" data-modal-target="#modal">About Me</div>
             </div>
           </div>
           <div class="card">
@@ -188,13 +226,48 @@ class ProfileSection extends HTMLElement {
                 </div>
                 </a>
               </div>
-              <div class="bio-button">About Me</div>
+              <div class="bio-button" data-modal-target="#modal">About Me</div>
             </div>
           </div>
         </div>
         </div>
         `;
         this.setAttribute('id', 'our-team');
+
+
+        const bioButtonElement = this.querySelectorAll("[data-modal-target]")
+        const closeElement = this.querySelectorAll("[data-modal-close]")
+        const overlayElement = this.querySelector("#overlay");
+        const listBio = this.getBio;
+          bioButtonElement.forEach((button,index)=>{
+            button.addEventListener("click",()=>{
+                const modal = this.querySelector(button.dataset.modalTarget)
+                const modalBody = modal.lastElementChild
+                if(modal == null){
+                    return;
+                }
+                  modalBody.innerHTML = `
+                  <div class="self-bio">
+                    <h2>Nama : ${listBio[index].nama}</h2>
+                    <h2> Universitas : ${listBio[index].universitas}</h2>
+                    <h2> Jurusan : ${listBio[index].jurusan} </h2>
+                  </div>
+                  `
+                
+                modal.classList.add("modal-active")
+                overlayElement.classList.add("overlay-active")
+            })
+        })
+        closeElement.forEach(button=>{
+          button.addEventListener("click",(e)=>{
+            const modal = e.target.parentElement.parentElement;
+            if(modal == null){
+              return;
+            }
+            modal.classList.remove("modal-active")
+            overlayElement.classList.remove("overlay-active")
+          })
+        })
     }
 }
 

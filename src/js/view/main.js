@@ -2,6 +2,8 @@
 256S114.6 512 256 512zM184 232H328c13.3 0 24 10.7 24 24s-10.7
 24-24 24H184c-13.3 0-24-10.7-24-24s10.7-24 24-24z"--> */
 
+import { div } from "@tensorflow/tfjs";
+
 
 export const main = ()=>{
     
@@ -45,4 +47,36 @@ export const main = ()=>{
         })
     }
     shadowBarElement.setEvent = eventClick;
+
+    // const modalButton = document.querySelectorAll("[data-modal-target]")
+    // const closeButton = document.querySelectorAll("[data-modal-close]")
+    // const overlayElement = document.querySelector("#overlay")
+    // const aboutMeEvent = ()=>{
+    //     modalButton.forEach(button=>{
+    //         button.addEventListener("click",()=>{
+    //             const modal = document.querySelector(button.dataset.modalTarget)
+    //             if(modal == null){
+    //                 return;
+    //             }
+    //             modal.classList.add("modal-active")
+    //             overlayElement.classList.add("overlay-active")
+    //         })
+    //     })
+    //     closeButton.forEach(button=>{
+    //         button.addEventListener("click",()=>{
+    //             const modal = button.closest(".modal")
+    //             if(modal == null){
+    //                 return;
+    //             }
+    //             modal.classList.remove("modal-active")
+    //             overlayElement.classList.remove("overlay-active")
+    //         })
+    //     })
+    // }
+
+
+
+
+    
+
 }
