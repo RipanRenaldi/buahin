@@ -52,10 +52,12 @@ const MODEL_JSON_URL =
   "https://cdn.glitch.global/50a2dd22-bf5a-4d29-8556-2567b7a29cae/model.json?v=1670744154265";
 
 let model;
+const preloadWrapper = document.querySelector(".preload-wrapper");
 const init = async () => {
-  console.log("Load Model");
-  model = await tf.loadLayersModel(MODEL_JSON_URL);
-  console.log("Model Loaded");
+    preloadWrapper.classList.add("load-page");
+    model = await tf.loadLayersModel(MODEL_JSON_URL);
+    preloadWrapper.classList.remove("load-page")
+
 };
 
 init();
@@ -163,3 +165,4 @@ const eventClick = (e) => {
   });
 };
 shadowBarElement.setEvent = eventClick;
+
