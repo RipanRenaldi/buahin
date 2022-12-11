@@ -8,21 +8,29 @@ class ProfileSection extends HTMLElement {
         nama: "Ripan Renaldi",
         universitas: "Telkom University",
         jurusan: "Sistem Informasi",
+        dicodingId : "M012X0101",
+        dicodingGroup : "M04"
       },
       {
         nama: "Reynaldi Hardiansyah",
         universitas: "Universitas Amikom Yogyakarta",
-        jurusan: "x",
+        jurusan: "Teknik Informatika",
+        dicodingId : "M183X0352",
+        dicodingGroup : "M03"
       },
       {
         nama: "Alfi Safira Az Zahrah",
         universitas: "UPN Veteran Jawa Timur",
-        jurusan: "x",
+        jurusan: "Sistem Informasi",
+        dicodingId : "M296Y0722",
+        dicodingGroup : "M06"
       },
       {
         nama: "Siti Auliaddina",
         universitas: "Universitas Adhirajasa Reswara Sanjaya",
-        jurusan: "x",
+        jurusan: "Teknik Informatika",
+        dicodingId : "M346Y0905",
+        dicodingGroup : "M06"
       },
     ];
   }
@@ -251,6 +259,8 @@ class ProfileSection extends HTMLElement {
                     <h2>Nama : ${listBio[index].nama}</h2>
                     <h2> Universitas : ${listBio[index].universitas}</h2>
                     <h2> Jurusan : ${listBio[index].jurusan} </h2>
+                    <h2> ID Dicoding : ${listBio[index].dicodingId} </h2>
+                    <h2> Grup Dicoding : ${listBio[index].dicodingGroup} </h2>
                   </div>
                   `;
 
