@@ -1,15 +1,14 @@
 class HeaderBar extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
-    set setEvent(event){
-        this._event = event;
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
+  set setEvent(event) {
+    this._event = event;
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = 
-        `
+  render() {
+    this.innerHTML = `
         <style>
         @media screen and (max-width: 550px) {
             nav ul li {
@@ -49,11 +48,9 @@ class HeaderBar extends HTMLElement {
         </nav>
         `;
 
-        const menuElement = this.querySelector(".menu");
-        menuElement.addEventListener("click",this._event)
-    }
-
-
+    const menuElement = this.querySelector(".menu");
+    menuElement.addEventListener("click", this._event);
+  }
 }
 
-customElements.define('header-bar', HeaderBar);
+customElements.define("header-bar", HeaderBar);

@@ -1,32 +1,33 @@
 class ProfileSection extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
-    get getBio(){
-      return [
-        {
-          nama : "Ripan Renaldi",
-          universitas : "Telkom University",
-          jurusan : "Sistem Informasi"
-        },
-        {
-          nama : "Reynaldi Hardiansyah",
-          universitas : "Universitas Amikom Yogyakarta",
-          jurusan : "x"
-        },        {
-          nama : "Alfi Safira Az Zahrah",
-          universitas : "UPN Veteran Jawa Timur",
-          jurusan : "x"
-        },        {
-          nama : "Siti Auliaddina",
-          universitas : "Universitas Adhirajasa Reswara Sanjaya",
-          jurusan : "x"
-        },
-      ]
-    }
-    render() {
-        this.innerHTML = 
-        `
+  connectedCallback() {
+    this.render();
+  }
+  get getBio() {
+    return [
+      {
+        nama: "Ripan Renaldi",
+        universitas: "Telkom University",
+        jurusan: "Sistem Informasi",
+      },
+      {
+        nama: "Reynaldi Hardiansyah",
+        universitas: "Universitas Amikom Yogyakarta",
+        jurusan: "x",
+      },
+      {
+        nama: "Alfi Safira Az Zahrah",
+        universitas: "UPN Veteran Jawa Timur",
+        jurusan: "x",
+      },
+      {
+        nama: "Siti Auliaddina",
+        universitas: "Universitas Adhirajasa Reswara Sanjaya",
+        jurusan: "x",
+      },
+    ];
+  }
+  render() {
+    this.innerHTML = `
         <style>
         @media screen and (max-width: 550px) {
           #our-team h1{
@@ -232,43 +233,42 @@ class ProfileSection extends HTMLElement {
         </div>
         </div>
         `;
-        this.setAttribute('id', 'our-team');
+    this.setAttribute("id", "our-team");
 
-
-        const bioButtonElement = this.querySelectorAll("[data-modal-target]")
-        const closeElement = this.querySelectorAll("[data-modal-close]")
-        const overlayElement = this.querySelector("#overlay");
-        const listBio = this.getBio;
-          bioButtonElement.forEach((button,index)=>{
-            button.addEventListener("click",()=>{
-                const modal = this.querySelector(button.dataset.modalTarget)
-                const modalBody = modal.lastElementChild
-                if(modal == null){
-                    return;
-                }
-                  modalBody.innerHTML = `
+    const bioButtonElement = this.querySelectorAll("[data-modal-target]");
+    const closeElement = this.querySelectorAll("[data-modal-close]");
+    const overlayElement = this.querySelector("#overlay");
+    const listBio = this.getBio;
+    bioButtonElement.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        const modal = this.querySelector(button.dataset.modalTarget);
+        const modalBody = modal.lastElementChild;
+        if (modal == null) {
+          return;
+        }
+        modalBody.innerHTML = `
                   <div class="self-bio">
                     <h2>Nama : ${listBio[index].nama}</h2>
                     <h2> Universitas : ${listBio[index].universitas}</h2>
                     <h2> Jurusan : ${listBio[index].jurusan} </h2>
                   </div>
-                  `
-                
-                modal.classList.add("modal-active")
-                overlayElement.classList.add("overlay-active")
-            })
-        })
-        closeElement.forEach(button=>{
-          button.addEventListener("click",(e)=>{
-            const modal = e.target.parentElement.parentElement;
-            if(modal == null){
-              return;
-            }
-            modal.classList.remove("modal-active")
-            overlayElement.classList.remove("overlay-active")
-          })
-        })
-    }
+                  `;
+
+        modal.classList.add("modal-active");
+        overlayElement.classList.add("overlay-active");
+      });
+    });
+    closeElement.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const modal = e.target.parentElement.parentElement;
+        if (modal == null) {
+          return;
+        }
+        modal.classList.remove("modal-active");
+        overlayElement.classList.remove("overlay-active");
+      });
+    });
+  }
 }
 
-customElements.define('profile-section', ProfileSection);
+customElements.define("profile-section", ProfileSection);

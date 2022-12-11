@@ -1,11 +1,10 @@
 class OverviewSection extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = 
-        `
+  render() {
+    this.innerHTML = `
         <style>
         @media screen and (max-width: 550px) {
           .container {
@@ -73,7 +72,7 @@ class OverviewSection extends HTMLElement {
         </div>
         </div>
         `;
-    }
+  }
 }
 
-customElements.define('overview-section', OverviewSection);
+customElements.define("overview-section", OverviewSection);

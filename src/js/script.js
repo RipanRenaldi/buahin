@@ -1,16 +1,16 @@
-import "../assets/style/style.css";
-import './component/header-bar.js';
-import './component/footer-bar.js';
-import './component/index/overview-section.js';
-import './component/index/faq-section.js';
-import './component/index/profile-section.js';
+import "./../assets/style/style.css";
+import "./component/header-bar.js";
+import "./component/footer-bar.js";
+import "./component/index/overview-section.js";
+import "./component/index/faq-section.js";
+import "./component/index/profile-section.js";
 import { main } from "./view/main.js";
 
-import pineapple from "../assets/images/pineapple.jpg";
-import profile1 from "../assets/images/profile/Ripan.jpeg";
-import profile2 from "../assets/images/profile/Rey.jpg";
-import profile3 from "../assets/images/profile/Alfi.jpg";
-import profile4 from "../assets/images/profile/Dina.jpg";
+import pineapple from "./../assets/images/pineapple.jpg";
+import profile1 from "./../assets/images/Ripan.jpeg";
+import profile2 from "./../assets/images/Rey.jpg";
+import profile3 from "./../assets/images/Alfi.jpg";
+import profile4 from "./../assets/images/Dina.jpg";
 
 window.addEventListener("load", () => {
   document.getElementById("test").src = pineapple;
@@ -18,7 +18,6 @@ window.addEventListener("load", () => {
   document.getElementById("user-reynaldi").src = profile2;
   document.getElementById("user-alfi").src = profile3;
   document.getElementById("user-siti").src = profile4;
-
 });
 
-document.addEventListener('DOMContentLoaded', main);
+document.addEventListener("DOMContentLoaded", main);
