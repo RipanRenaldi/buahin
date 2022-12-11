@@ -1,5 +1,5 @@
 {
-  "name": "capstone-project",
+  "name": "buahin",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RipanRenaldi/capstone-project.git"
+    "url": "git+https://github.com/RipanRenaldi/buahin.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RipanRenaldi/capstone-project/issues"
+    "url": "https://github.com/RipanRenaldi/buahin/issues"
   },
-  "homepage": "https://github.com/RipanRenaldi/capstone-project#readme",
+  "homepage": "https://github.com/RipanRenaldi/buahin#readme",
   "devDependencies": {
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",

@@ -34,18 +34,12 @@ const TARGET_CLASSES = {
   15: "Strawberry",
 };
 
-// const TARGET_CLASSES = ["satu","dua","tiga","empat","lima","enam","tujuh"]
 window.addEventListener("load", () => {
-  const rightImage = document.getElementById("right-image");
-  const numberone = document.getElementById("no-1");
-  const numbertwo = document.getElementById("no-2");
-  const numberthree = document.getElementById("no-3");
-  const numberfour = document.getElementById("no-4");
-  rightImage.src = fruit;
-  numberone.src = number1;
-  numbertwo.src = number2;
-  numberthree.src = number3;
-  numberfour.src = number4;
+  document.getElementById("right-image").src = fruit;
+  document.getElementById("no-1").src = number1;
+  document.getElementById("no-2").src = number2;
+  document.getElementById("no-3").src = number3;
+  document.getElementById("no-4").src = number4;
 });
 
 const MODEL_JSON_URL =
@@ -54,10 +48,9 @@ const MODEL_JSON_URL =
 let model;
 const preloadWrapper = document.querySelector(".preload-wrapper");
 const init = async () => {
-    preloadWrapper.classList.add("load-page");
-    model = await tf.loadLayersModel(MODEL_JSON_URL);
-    preloadWrapper.classList.remove("load-page")
-
+  preloadWrapper.classList.add("load-page");
+  model = await tf.loadLayersModel(MODEL_JSON_URL);
+  preloadWrapper.classList.remove("load-page");
 };
 
 init();
@@ -165,4 +158,3 @@ const eventClick = (e) => {
   });
 };
 shadowBarElement.setEvent = eventClick;
-
