@@ -11,13 +11,16 @@ class OverviewSection extends HTMLElement {
             margin: 20px 10px;
             flex-direction: column-reverse;
           }
+          
           .overview {
             margin-bottom: 40px;
             max-width: 100%;
           }
+
           .overview h1{
             font-size:1.7rem;
           }
+
           .overview p{
             font-size:0.9rem;
             max-width: 555px;
@@ -29,17 +32,21 @@ class OverviewSection extends HTMLElement {
             margin: 30px 10px;
             flex-direction: column-reverse;
           }
+
           .overview {
             margin-bottom: 40px;
             max-width: 100%;
           }
+
           .overview h1{
             font-size:1.7rem;
           }
+
           .overview p{
             font-size:0.9rem;
             max-width: 555px;
           }
+
           .button{
             margin-top:2rem;
             font-size: 0.8rem;
@@ -48,28 +55,26 @@ class OverviewSection extends HTMLElement {
           }
         }
         </style>
-
+    
         <div class="container" id="overview">
-        <div class="overview">
-          <h1>Detect Your Fruit Anytime Anywhere</h1>
-          <p>
-            Buahin merupakan aplikasi fruit detector berbasis website
-            untuk memudahkan dalam mengidentifikasi berbagai macam jenis 
-            buah-buahan.
-          </p>
-          <div class="button">Get Started</div>
-        </div>
-        <div class="right-image">
-          <div class="images">
-            <img src="" alt="" id="test" />
+          <div class="overview">
+            <h1>Detect Your Fruit Anytime Anywhere</h1>
+            <p>
+              Fruit Detector berbasis website yang siap memudahkan kalian dalam mengidentifikasi berbagai macam buah-buahan.
+            </p>
+            <div class="button">Get Started</div>
           </div>
-          <div class="images">
-            <img src="" alt="" />
+          <div class="right-image">
+            <div class="images">
+              <img src="" alt="" id="test" />
+            </div>
+            <div class="images">
+              <img src="" alt="" />
+            </div>
+            <div class="images">
+              <img src="" alt="" />
+            </div>
           </div>
-          <div class="images">
-            <img src="" alt="" />
-          </div>
-        </div>
         </div>
         `;
   }
